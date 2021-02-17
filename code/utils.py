@@ -246,6 +246,8 @@ def writePDF(parser, cemaden_sta, cemaden_plots, inmet_sta, inmet_plots):
 def clean_tmp():
 	files = glob.glob('./tmp/*')
 	for f in files:
+		if os.path.basename(f) == 'tmp':
+			continue
 		os.remove(f)
 
 
