@@ -29,3 +29,12 @@ Havendo múltiplos arquivos, repita o processo acima e concatene-os:
 cat data1.csv data2.csv > data.csv
 ```
 
+Finalmente, copie os arquivos processados para o diretório **data**, modifique o arquivo **config.ini** e execute:
+
+```python
+$ python3 auto.py
+```
+
+**Nota**: Se um dos arquivos não estiver presente, preencha o diretório no arquivo de configuração com uma string vazia. Os horários para início e término das análises devem estar no formato YYYY-MM-DD HH. Em caso de intervalos grandes (vários dias ou maiores), pode ser necessário alterar as configurações dos plots nos códigos. As demais variáveis do arquivo de configuração devem estar preenchidas com "True" ou "False".
+
+O resultado da execução do programa é um arquivo em formato PDF "report.py" no diretório principal. 
