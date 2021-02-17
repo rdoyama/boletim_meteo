@@ -8,11 +8,24 @@ Os códigos neste diretório têm como objetivo automatizar o processamento e a 
   * [FPDF](https://pyfpdf.readthedocs.io/en/latest/)
   * [Pandas](https://pandas.pydata.org/getting_started.html)
 
+Todas as etapas foram testadas em um computador Linux.
+
 
 ### Instalação
 Para a instalação deste programa, basta baixar o repositório em formato ZIP e extraí-lo no local desejado ou cloná-lo.
 
 
 ### Utilização
+A primeira etapa consiste na preparação dos dados de análise. O CEMADEN e o INMET utilizam a vírgula "," como separador decimal e o ponto e vírgula ";" como delimitador nos arquivos CSV. É necessário substituí-los pelo ponto "." e pela vírgula ",", respectivamente:
 
+'''bash
+$ sed -i 's/,/./g' data1.csv
+$ sed -i 's/;/,/g' data1.csv
+'''
+
+Havendo múltiplos arquivos, repita o processo acima e concatene-os:
+
+'''bash
+cat data1.csv data2.csv > data.csv
+'''
 
